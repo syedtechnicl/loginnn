@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>vivekanand collage</title>
+</head>
+<body style="background-image:linear-gradient(to right,purple,blue">
+<br><br><br><br>
+<div class="container p-5" >
+	<div class="container pt-5">
+<div class="main">
+<h2 class=" p-4" style="border-radius:200px;text-align:center; text-decoration:underline; text-decoration-style:wavy;text-decoration-color:red;color:#fff;text-transform:uppercase;"><b><span style="color:red;">vivekanand</span> <span style="color:green;">login</span> form</b></h2>
+<br>
+<center><img src="images/loo.png" class="img-fluid"></center>
+<form id="form_id" method="post" name="myform">
+<label><b style="color:#fff">User Name :</b></label>
+<input class="form-control" type="text" placeholder="user name" name="username" id="username"/>
+<br><br>
+<label><b style="color:#fff">Password :</b></label>
+<input class="form-control" type="password" placeholder="password" name="password" id="password"/><br><br>
+<center style='color:#fff;text-decoration:underline;'><b>forger password ??</b></center>
+<br>
+<input class="btn btn-outline-primary btn-lg" type="button" value="Login" id="submit" onclick="validate()"/>
+</form></div></div>
+</div>
+
+
+<script>
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "vivekanand" && password == "vim3416"){
+alert ("Login successfully");
+window.location = "index.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}	
+</script>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+
+</body>
+</html>
